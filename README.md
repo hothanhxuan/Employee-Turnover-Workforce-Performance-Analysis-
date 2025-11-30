@@ -90,4 +90,131 @@ Employee | ManagerID | PositionID | Gender | RaceDesc | Date of Hire | Recruitme
 10084-Ait Sidi | 4 | 27 | M | White | 1975-05-05 | Indeed | Voluntarily Terminated | 104437 | 3 | 4.96 | 17
 ...
 
+</details>
 
+#### 3️⃣ Data Relationships  
+
+Since the dataset is a single fact table, Power BI uses:  
+- Calculated columns (Tenure, Age)  
+- DAX measures (Turnover Rate, Avg Salary, Absence Rate)  
+- Segmentation by dimensions such as Department, Gender, Marital Status, Performance Score  
+
+---
+
+## 🧠 Design Thinking Process  
+
+**1️⃣ Empathize**  
+HR leaders need fast, accurate insights about workforce structure, turnover reasons, and engagement.
+
+**2️⃣ Define Point of View**  
+“How might we help HR understand the root causes of turnover and maintain an optimized workforce?”
+
+**3️⃣ Ideate**  
+Dashboard ideas included:  
+- Turnover analysis  
+- Satisfaction & engagement insights  
+- Demographic breakdown  
+- Recruitment efficiency  
+- Department performance benchmarking  
+
+**4️⃣ Prototype and Review**  
+Created Power BI dashboard iterations and refined based on stakeholder feedback.
+
+---
+
+## ⚒️ Main Process  
+
+### 1️⃣ Data Cleaning & Preprocessing  
+✔ Removed empty header rows  
+✔ Standardized date formats  
+✔ Derived Age and Tenure fields  
+✔ Normalized employment status names  
+✔ Removed duplicate employee records  
+
+### 2️⃣ Exploratory Data Analysis (EDA)  
+Explored:  
+- Salary by department  
+- Distribution of tenure and age  
+- Termination reasons  
+- Satisfaction score patterns  
+- Recruitment source effectiveness  
+
+### 3️⃣ Power BI Measures (DAX)  
+Examples of measures created:  
+- **Turnover Rate**  
+- **Absence Rate**  
+- **Average Tenure**  
+- **Average Satisfaction Score**  
+- **Average Engagement Score**
+
+### 4️⃣ Power BI Visualization  
+Developed a 4-page dashboard covering:  
+- Workforce Overview  
+- Turnover & Department Metrics  
+- Recruitment vs Termination Insights  
+- Employee Detail View  
+
+---
+
+## 📊 Key Insights & Visualizations  
+
+### 1️⃣ Workforce Overview  
+
+**Main Findings:**  
+- Total employees: **299**  
+- Turnover rate: **34.78%**  
+- Avg tenure: **12.31 years**  
+- Absence rate: **0.23%**  
+- Avg satisfaction score: **3.89**  
+- Avg engagement score: **4.11**
+
+**Interpretation:**  
+The company has a mature workforce but faces turnover challenges that may affect stability and productivity.
+
+---
+
+### 2️⃣ Department Analysis  
+
+**Key Metrics:**  
+- Production turnover: **40.69%** (highest)  
+- Sales turnover: **16.13%** (lowest)  
+- IT/IS & Software Engineering show high engagement (>4.0)
+
+**Interpretation:**  
+Production may require targeted retention programs, while Sales' practices could serve as a model for other departments.
+
+---
+
+### 3️⃣ Recruitment & Termination Insights  
+
+**Top Recruitment Sources:**  
+- Indeed (82 hires)  
+- LinkedIn (74 hires)  
+
+**Top Termination Reasons:**  
+- Another position (20)  
+- Unhappy (14)  
+- More money (11)  
+
+**Interpretation:**  
+Most separations are avoidable with improvements in compensation, career growth, and workplace satisfaction.
+
+---
+
+## 🔎 Final Conclusion & Recommendations  
+
+### 📌 Key Takeaways  
+✔ High turnover rate suggests a need for stronger retention strategies  
+✔ Production department faces significant churn issues  
+✔ Satisfaction & engagement levels vary across departments  
+✔ Recruitment relies heavily on Indeed & LinkedIn  
+✔ Exit reasons indicate internal improvement opportunities  
+
+### 📌 Recommended Actions  
+✔ Implement retention initiatives focused on Production  
+✔ Review compensation competitiveness  
+✔ Provide more career mobility opportunities  
+✔ Enhance onboarding & engagement frameworks  
+✔ Diversify recruitment sources  
+
+---
