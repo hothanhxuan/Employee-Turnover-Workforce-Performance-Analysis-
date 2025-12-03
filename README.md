@@ -51,19 +51,16 @@ This project develops an **operational HR analytics dashboard** using Excel and 
 ### 📌 Data Source  
 - **HRDataset.xlsx**  
   - Format: Excel (.xlsx)  
-  - Rows: 300 (employees)  
+  - Rows: 311 (employees)  
   - Columns: 20+ HR attributes (demographics, performance, termination, satisfaction)
 
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used  
 Only one main HR dataset was used:  
-- **Employee Master Table** — includes demographics, job info, performance, satisfaction, termination, recruitment source, etc.
+- **Employee Master Table (Fact table)** — includes demographics, job info, performance, satisfaction, termination, recruitment source, etc.
+- Contains details employees information (**311 records**).
 
-#### 2️⃣ Table Schema & Data Snapshot  
-
-- **Fact table: Employee** - Contains details employees information (**311 records**).
-- 
 | Column Name | Description |
 |-------------|-------------|
 | EmployeeID | Unique employee identifier |
@@ -85,7 +82,7 @@ Only one main HR dataset was used:
 | AbsenceDays | Total days absent |
 
 
-#### 3️⃣ Data Relationships  
+#### 2️⃣ Data Relationships  
 
 ![Image](https://github.com/user-attachments/assets/38047a1c-6e57-45f5-a630-3d4dada177a9)
 
