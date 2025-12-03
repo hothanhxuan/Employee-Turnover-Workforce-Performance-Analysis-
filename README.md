@@ -54,9 +54,6 @@ This project develops an **operational HR analytics dashboard** using Excel and 
   - Rows: 300 (employees)  
   - Columns: 20+ HR attributes (demographics, performance, termination, satisfaction)
 
-- **DAC PBI – Project 1.pdf (Power BI Dashboard)**  
-  - Visualized metrics: turnover, demographics, satisfaction, recruitment sources, department performance  
-
 ### 📊 Data Structure & Relationships  
 
 #### 1️⃣ Tables Used  
@@ -65,6 +62,8 @@ Only one main HR dataset was used:
 
 #### 2️⃣ Table Schema & Data Snapshot  
 
+- **Fact table: Employee** - Contains details employees information (**311 records**).
+- 
 | Column Name | Description |
 |-------------|-------------|
 | EmployeeID | Unique employee identifier |
@@ -85,20 +84,17 @@ Only one main HR dataset was used:
 | EngagementScore | Engagement rating |
 | AbsenceDays | Total days absent |
 
-<details>
-Employee | ManagerID | PositionID | Gender | RaceDesc | Date of Hire | RecruitmentSource | EmploymentStatus | Salary | SatisfactionScore | EngagementScore | AbsenceDays
-10026-Adinolfi | 22 | 19 | M | White | 1983-10-07 | Indeed | Active | 62506 | 5 | 4.6 | 1
-10084-Ait Sidi | 4 | 27 | M | White | 1975-05-05 | Indeed | Voluntarily Terminated | 104437 | 3 | 4.96 | 17
-...
-
-</details>
 
 #### 3️⃣ Data Relationships  
 
-Since the dataset is a single fact table, Power BI uses:  
-- Calculated columns (Tenure, Age)  
-- DAX measures (Turnover Rate, Avg Salary, Absence Rate)  
-- Segmentation by dimensions such as Department, Gender, Marital Status, Performance Score  
+![Image](https://github.com/user-attachments/assets/38047a1c-6e57-45f5-a630-3d4dada177a9)
+
+| **From Table** | **To Table** | **Join Key**   | **Relationship Type**                                  |
+|------------|----------|------------|----------------------------------------------------|
+| `Employee`   | `Position`| `PositionID` | Many-to-One (multiple employees belong to one position) |
+| `Employee`   | `MaritalStatus`| `MaritalStatus ID` |  Many-to-One (multiple employees belong to one marital status) |
+| `Employee`   | `Performance`| `PerfScoreID` | Many-to-One (multiple employees belong to one performance score) |
+| `Department`   | `Position` | `DeptID`   | Many-to-One (multiple positions belong to one department) |
 
 ---
 
@@ -159,6 +155,10 @@ Developed a 4-page dashboard covering:
 
 ## 📊 Key Insights & Visualizations  
 
+### 🔍 Dashboard Executive Summary
+
+![Image](https://github.com/user-attachments/assets/fb194ecd-ddf7-4984-b872-dfbf1dc4ad6b)
+
 ### 1️⃣ Workforce Overview  
 
 **Main Findings:**  
@@ -200,6 +200,8 @@ Production may require targeted retention programs, while Sales' practices could
 **Interpretation:**  
 Most separations are avoidable with improvements in compensation, career growth, and workplace satisfaction.
 
+### 🔍 Dashboard Workforce Database 
+![Image](https://github.com/user-attachments/assets/ca274757-2134-429a-ad61-db5cd032376b)
 ---
 
 ## 🔎 Final Conclusion & Recommendations  
